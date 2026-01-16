@@ -1,0 +1,55 @@
+name: bayesian-glacier
+channels:
+  - conda-forge
+dependencies:
+  # Core Python
+  - python=3.10
+  
+  # JAX ecosystem (CPU version - use jaxlib-gpu for CUDA)
+  - jax
+  - jaxlib
+  - flax
+  - optax
+  
+  # FEniCSx for FEM solver
+  - fenics-dolfinx
+  - mpich
+  
+  # Scientific computing
+  - numpy
+  - scipy
+  - scikit-learn
+  
+  # Visualization
+  - matplotlib
+  - seaborn
+  - plotly
+  - pyvista
+  
+  # Data handling
+  - pandas
+  - h5py
+  - xarray
+  
+  # Web app
+  - streamlit
+  - gradio
+  
+  # Utilities
+  - tqdm
+  - pyyaml
+  - jupyter
+  - ipykernel
+  
+  # Development
+  - pytest
+  - black
+  - flake8
+  - mypy
+  
+  # Pip-only packages
+  - pip
+  - pip:
+    - numpyro  # For full Bayesian inference (optional upgrade)
+    - tensorflow-probability  # Alternative Bayesian framework
+    - dm-haiku  # DeepMind's NN library (JAX-based)

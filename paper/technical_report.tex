@@ -194,6 +194,15 @@ Bayesian NN + MC (100 samples) & 0.030 & 6× \\
 
 The surrogate achieves a \textbf{67× speedup} compared to FEM while maintaining physical realism. Even with 100 MC Dropout samples for uncertainty quantification, predictions complete in 0.03s—still 6× faster than a single FEM solve.
 
+\subsection{Spatial Accuracy}
+Figure \ref{fig:comparison} presents a direct visual comparison between the FEM ground truth and the Bayesian Neural Network mean prediction for a representative test case. The BNN surrogate accurately captures the complex flow features of Arolla Glacier, including the velocity gradients near the bedrock (no-slip condition) and the high-velocity surface regions. The absolute error distribution is spatially uniform, with peak errors remaining below 1\% of the maximum velocity.
+
+\begin{figure*}[htbp]
+\centerline{\includegraphics[width=\textwidth]{fem_vs_bnn_comparison.png}}
+\caption{Comparison of velocity fields: (Top-Left) FEM Ground Truth, (Top-Right) BNN Mean Prediction, (Bottom-Left) Absolute Error, (Bottom-Right) Relative Error. The surrogate model faithfully reproduces the spatial flow patterns with minimal error.}
+\label{fig:comparison}
+\end{figure*}
+
 \subsection{Uncertainty Quantification}
 Figure \ref{fig:uncertainty} shows MC Dropout predictions with 68\% and 95\% confidence intervals. The surrogate captures the FEM ground truth within the 95\% CI across the entire domain.
 

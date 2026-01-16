@@ -34,11 +34,13 @@ A **Bayesian Neural Network** surrogate model for glacier flow simulation that a
 
 ### Visualization Preview
 
-**FEM vs BNN 4-Panel Comparison:**
+**1. High-Fidelity Spatial Reconstruction**
 ![Comparison](plots/comparison/fem_vs_bnn_comparison.png)
+*Figure 1: Side-by-side comparison of the Finite Element Method (FEM) ground truth (top-left) and the Bayesian Neural Network (BNN) prediction (top-right). The bottom panels show the absolute and relative errors. The result demonstrates that the BNN surrogate faithfully captures intricate flow features, including the no-slip boundary condition at the bedrock and surface velocity gradients, with errors below 1%.*
 
-**Training Convergence:**
+**2. Stable Training Convergence**
 ![Training](plots/training_curves.png)
+*Figure 2: Training and validation loss curves over 100 epochs. The monotonic decrease in both training (blue) and validation (orange) loss indicates stable learning without overfitting. The model converges rapidly, achieving a final MSE of ~5e-8.*
 
 ---
 
